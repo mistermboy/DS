@@ -24,17 +24,12 @@ public class Customer {
 		String result = "Alquileres de: " + getName() + "\n";
 
 		for (Rental rental : rentals) {
-			// 1) Calcula el importe de cada alquiler
-			double price = rental.getMovie().getPrice(rental.getDays());
 		
-			// 2) Cada alquiler da 1 punto. Punto extra para novedades alquiladas 2 o más días
-			int points = rental.getMovie().getPoints(rental.getDays());
-
-			// 3) Acumula los totales
+			double price = rental.getMovie().getPrice(rental.getDays());
 			totalPrice += price;
-			totalPoints += points;
+		
+			totalPoints += rental.getMovie().getPoints(rental.getDays());
 
-			// 4) Muestra el importe de esta película alquilada
 			result += "\t" + rental.getMovie().getTitle() + "\t" + price + " €\n";
 		}
 
