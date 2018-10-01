@@ -1,0 +1,24 @@
+cuadrado
+pinchar 10,10
+soltar 20,20
+dibujar		// Se ha creado un cuadrado y la herramienta vuelve a ser la de selección
+
+
+circulo
+pinchar 100,100
+soltar 200,200
+dibujar		// Se ha creado un círculo
+
+
+pinchar 13,13
+mover 15,15
+dibujar		// Se está moviendo el cuadrado
+soltar 20,20
+dibujar		// Se ha movido
+
+
+triangulo
+pinchar 50,50
+pinchar 60,60
+pinchar 70,70
+dibujar		// Se crea un triángulo
