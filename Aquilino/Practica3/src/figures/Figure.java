@@ -8,6 +8,8 @@ public interface Figure {
 
 	void pinchar(Point point);
 
-	void soltar(int ancho, int alto);
+	void soltar(int x, int y);
+	
+	boolean esPinchada(int x,int y);
 
 }

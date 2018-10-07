@@ -8,7 +8,7 @@ import java.io.InputStreamReader;
 import editor.Dibujo;
 import editor.Editor;
 import figures.Circle;
-import figures.Square;
+import figures.Rectangle;
 import figures.Triangle;
 
 public class Main {
@@ -32,19 +32,19 @@ public class Main {
 			if (line[0].equals("exit"))
 				return;
 			if (line[0].equals("cuadrado"))
-				editor.addFigure(new Square());
+				editor.addFigure(new Rectangle());
 			else if (line[0].equals("circulo"))
 				editor.addFigure(new Circle());
 			else if (line[0].equals("triangulo"))
 				editor.addFigure(new Triangle());
 			else if (line[0].equals("seleccion"))
-				; // editor.xxx
+				editor.activateSelection();
 			else if (line[0].equals("pinchar")) {
 				editor.pinchar(new Point(Integer.parseInt(line[1]), Integer.parseInt(line[2])));
 			} else if (line[0].equals("mover")) {
 				int x = Integer.parseInt(line[1]);
 				int y = Integer.parseInt(line[2]);
-				// editor.xxx
+				editor.mover(new Point(Integer.parseInt(line[1]), Integer.parseInt(line[2])));
 			} else if (line[0].equals("soltar")) {
 				editor.soltar(Integer.parseInt(line[1]), Integer.parseInt(line[2]));
 			} else if (line[0].equals("dibujar"))

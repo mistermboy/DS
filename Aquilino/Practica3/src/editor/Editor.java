@@ -8,6 +8,7 @@ public class Editor {
 
 	private Dibujo dibujo;
 	private Figure selectionTool;
+	private boolean isSelection;
 
 	public Editor(Dibujo dibujo) {
 		setDibujo(dibujo);
@@ -28,14 +29,35 @@ public class Editor {
 	public void addFigure(Figure figure) {
 		selectionTool = figure;
 		dibujo.addFigure(figure);
+		isSelection = false;
 	}
 
-	public void pinchar(Point points) {
-		selectionTool.pinchar(points);
+	public void pinchar(Point point) {
+
+		if (!isSelection)
+			selectionTool.pinchar(point);
+		else
+			seleccionar(point);
 	}
 
-	public void soltar(int ancho, int alto) {
-		selectionTool.soltar(ancho, alto);
+	public void mover(Point point) {
+		selectionTool.pinchar(point);
+	}
+
+	public void activateSelection() {
+		isSelection = true;
+	}
+
+	public void soltar(int x, int y) {
+		selectionTool.soltar(x, y);
+	}
+
+	private void seleccionar(Point point) {
+		for (Figure f : dibujo.getFigures()) {
+			if (f.esPinchada(point.x, point.y))
+				selectionTool = f;
+
+		}
 	}
 
 }
