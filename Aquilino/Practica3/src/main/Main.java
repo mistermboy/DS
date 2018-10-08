@@ -42,8 +42,6 @@ public class Main {
 			else if (line[0].equals("pinchar")) {
 				editor.pinchar(new Point(Integer.parseInt(line[1]), Integer.parseInt(line[2])));
 			} else if (line[0].equals("mover")) {
-				int x = Integer.parseInt(line[1]);
-				int y = Integer.parseInt(line[2]);
 				editor.mover(new Point(Integer.parseInt(line[1]), Integer.parseInt(line[2])));
 			} else if (line[0].equals("soltar")) {
 				editor.soltar(Integer.parseInt(line[1]), Integer.parseInt(line[2]));

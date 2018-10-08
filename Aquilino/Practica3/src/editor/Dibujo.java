@@ -1,6 +1,5 @@
 package editor;
 
-import java.awt.Point;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -17,12 +16,6 @@ public class Dibujo {
 
 	public void addFigure(Figure figure) {
 		figures.add(figure);
-	}
-
-	public void getSelection(Point point) {
-		for (Figure f : figures) {
-
-		}
 	}
 
 	public List<Figure> getFigures() {
