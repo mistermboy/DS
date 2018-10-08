@@ -1,6 +1,8 @@
+package form;
 import java.util.*;
 
 public class Formulario {
+	
 	public void addCampo(Campo campo) {
 		campos.add(campo);
 	}

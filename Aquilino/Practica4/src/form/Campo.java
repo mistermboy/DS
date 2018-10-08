@@ -1,13 +1,19 @@
-import java.io.*;
+package form;
 
-public class CampoPredefinido implements Campo {
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+import form.validators.Validator;
+
+public class Campo {
 
 	private String etiqueta;
-	private String[] valores;
+	private Validator validador;
 
-	public CampoPredefinido(String etiqueta, String... valores) {
+	public Campo(String etiqueta, Validator validador) {
 		this.etiqueta = etiqueta;
-		this.valores = valores;
+		this.validador = validador;
 	}
 
 	public void pideDato() {
@@ -15,17 +21,13 @@ public class CampoPredefinido implements Campo {
 
 		boolean valido;
 		do {
-			valido = false;
+			valido = true;
 			try {
+
 				System.out.print(etiqueta + ": ");
 				texto = consola.readLine();
+				valido = validador.isValid(texto);
 
-				for (String valor : valores) {
-					if (texto.toLowerCase().equals(valor.toLowerCase())) {
-						valido = true;
-						break;
-					}
-				}
 			} catch (IOException ex) {
 				System.out.println(ex);
 			}
@@ -37,4 +39,5 @@ public class CampoPredefinido implements Campo {
 	}
 
 	private String texto;
+
 }
