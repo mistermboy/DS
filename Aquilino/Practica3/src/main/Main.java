@@ -10,7 +10,7 @@ import editor.Editor;
 import figures.Circle;
 import figures.Rectangle;
 import figures.Triangle;
-
+																														
 public class Main {
 
 	public static void main(String[] args) throws IOException {
