@@ -6,8 +6,8 @@ import form.validators.MoreThanValidator;
 import form.validators.NumberValidator;
 import form.validators.PredefinedValidator;
 import form.validators.TextValidator;
-import form.validators.decorate.AndValidator;
-import form.validators.decorate.OrValidator;
+import form.validators.composite.AndValidator;
+import form.validators.composite.OrValidator;
 
 public class Main {
 

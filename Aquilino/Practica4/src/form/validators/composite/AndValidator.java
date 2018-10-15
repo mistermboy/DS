@@ -1,4 +1,4 @@
-package form.validators.decorate;
+package form.validators.composite;
 
 import form.validators.Validator;
 
