@@ -1,13 +1,18 @@
-package figures;
+package figures.circle;
 
 import java.awt.Point;
+
+import figures.Figure;
 
 public class Circle implements Figure {
 
 	private Point point;
 	private int radio;
 
-	public Circle() {
+	public Circle(Point point, int radio) {
+		super();
+		this.point = point;
+		this.radio = radio;
 	}
 
 	@Override
@@ -19,24 +24,19 @@ public class Circle implements Figure {
 
 	}
 
-	@Override
-	public void pinchar(Point point) {
-		this.point = point;
-	}
-
-	@Override
-	public void soltar(int x, int y) {
-		this.radio = (point.x - y); // suponiendo que siempre nos pasen la misma x e y
-	}
-
-	@Override
-	public boolean esPinchada(int x, int y) {
-		double distancia = Math.sqrt(Math.pow(x - point.x, 2) + Math.pow(y - point.y, 2));
-		return distancia < radio;
-	}
-
 	public String toString() {
 		return "Circulo: x = " + point.getX() + ", y = " + point.getY() + ", circulo: " + radio;
+	}
+
+	@Override
+	public void move(int x, int y) {
+		point.translate(x, y);
+	}
+
+	@Override
+	public boolean isContent(int x, int y) {
+		double distancia = Math.sqrt(Math.pow(x - point.x, 2) + Math.pow(y - point.y, 2));
+		return distancia < radio;
 	}
 
 }

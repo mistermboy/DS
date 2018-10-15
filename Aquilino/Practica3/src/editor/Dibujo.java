@@ -22,4 +22,13 @@ public class Dibujo {
 		return figures;
 	}
 
+	public Figure getFigure(int x, int y) {
+		for (Figure f : figures) {
+			if (f.isContent(x, y)) {
+				return f;
+			}
+		}
+		return null;
+	}
+
 }

@@ -1,15 +1,10 @@
 package figures;
 
-import java.awt.Point;
-
 public interface Figure {
 
 	void draw();
 
-	void pinchar(Point point);
+	void move(int x, int y);
 
-	void soltar(int x, int y);
-	
-	boolean esPinchada(int x,int y);
-
+	boolean isContent(int x, int y);
 }
