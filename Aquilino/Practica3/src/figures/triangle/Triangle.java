@@ -2,7 +2,7 @@ package figures.triangle;
 
 import java.awt.Point;
 
-import figures.Figure;
+import editor.Figure;
 
 public class Triangle implements Figure {
 

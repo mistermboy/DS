@@ -1,7 +1,6 @@
 package editor;
 
-import figures.Figure;
-import tools.SelectionTool;
+import editor.tools.SelectionTool;
 
 public class Editor {
 

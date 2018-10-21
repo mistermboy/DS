@@ -2,7 +2,7 @@ package figures.circle;
 
 import java.awt.Point;
 
-import figures.Figure;
+import editor.Figure;
 
 public class Circle implements Figure {
 

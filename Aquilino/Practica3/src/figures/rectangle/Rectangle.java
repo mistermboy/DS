@@ -2,7 +2,7 @@ package figures.rectangle;
 
 import java.awt.Point;
 
-import figures.Figure;
+import editor.Figure;
 
 public class Rectangle implements Figure {
 

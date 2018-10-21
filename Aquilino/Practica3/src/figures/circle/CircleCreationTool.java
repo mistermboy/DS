@@ -1,8 +1,8 @@
 package figures.circle;
 
 import editor.Editor;
-import figures.Figure;
-import tools.AbstractCreationTool;
+import editor.Figure;
+import editor.tools.AbstractCreationTool;
 
 public class CircleCreationTool extends AbstractCreationTool {
 	public CircleCreationTool(Editor editor) {

@@ -1,8 +1,8 @@
 package figures.rectangle;
 
 import editor.Editor;
-import figures.Figure;
-import tools.AbstractCreationTool;
+import editor.Figure;
+import editor.tools.AbstractCreationTool;
 
 public class RectangleCreationTool extends AbstractCreationTool {
 
