@@ -46,9 +46,19 @@ public class TextModeInterface {
 				editor.soltar(Integer.parseInt(line[1]), Integer.parseInt(line[2]));
 			else if (line[0].equals("dibujar"))
 				editor.dibujar();
-			else if (line[0].equals("undo"))
+			else if (line[0].equals("undo")) {
+				if (!editor.getActionManager().canBeUndone()) {
+					System.out.println("No hay nada que deshacer");
+					return;
+				}
 				editor.undo();
-			else
+			} else if (line[0].equals("repetir")) {
+				if (!editor.getActionManager().canBeRedone()) {
+					System.out.println("No hay nada que repetir");
+					return;
+				}
+				editor.redo();
+			} else
 				System.out.println("Comando no válido");
 
 		} while (true);

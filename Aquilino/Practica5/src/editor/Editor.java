@@ -1,8 +1,8 @@
 package editor;
 
-import java.util.Stack;
-
-import herramientas.*;
+import actions.ActionManager;
+import herramientas.Herramienta;
+import herramientas.HerramientaSeleccion;
 
 public class Editor {
 
@@ -54,19 +54,20 @@ public class Editor {
 		actual = principal;
 	}
 
-	public void addDibujo() {
-		undo.push(dibujo.clone());
+	public void undo() {
+		getActionManager().undo();
 	}
 
-	public void undo() {
-		if (undo.size() > 0)
-			dibujo = undo.pop();
+	public void redo() {
+		getActionManager().redo();
+	}
+
+	public ActionManager getActionManager() {
+		return getDibujo().getActionManager();
 	}
 
 	private Dibujo dibujo;
 	private Herramienta actual;
 	private Herramienta principal;
-
-	private Stack<Dibujo> undo = new Stack<>();
 
 }

@@ -2,15 +2,14 @@ package editor;
 
 import java.util.*;
 
+import actions.ActionManager;
+
 public class Dibujo {
 
-	public Dibujo() {
+	List<Figura> figuras = new ArrayList<Figura>();
 
-	}
-
-	public Dibujo(List<Figura> figuras) {
-		this.figuras = figuras;
-	}
+	private Figura currentSelection;
+	private ActionManager actionManager = new ActionManager();
 
 	public void AddFigura(Figura figura) {
 		figuras.add(figura);
@@ -28,10 +27,24 @@ public class Dibujo {
 		return null;
 	}
 
-	public Dibujo clone() {
-		return new Dibujo(new ArrayList<>(figuras));
+	public void removeFigure(Figura figura) {
+		figuras.remove(figura);
 	}
 
-	List<Figura> figuras = new ArrayList<Figura>();
+	public void clearCurrentSelection() {
+		currentSelection = null;
+	}
+
+	public Figura getCurrentSelection() {
+		return currentSelection;
+	}
+
+	public void setCurrentSelection(Figura figure) {
+		currentSelection = figure;
+	}
+
+	public ActionManager getActionManager() {
+		return actionManager;
+	}
 
 }

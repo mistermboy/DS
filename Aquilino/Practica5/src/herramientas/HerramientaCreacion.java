@@ -20,7 +20,6 @@ public abstract class HerramientaCreacion implements Herramienta {
 	public void soltar(int x, int y) {
 		fin = new Point(x, y);
 		Figura figura = doCreaFigura(inicio, fin);
-		editor.addDibujo();
 		editor.getDibujo().AddFigura(figura);
 		editor.finHerramienta();
 	}

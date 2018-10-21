@@ -27,7 +27,6 @@ public class HerramientaSeleccion implements Herramienta {
 
 	private void mueveIncremento(int x, int y) {
 		if (seleccionada != null) {
-			editor.addDibujo();
 			seleccionada.mover(x - posicion.x, y - posicion.y);
 			posicion = new Point(x, y);
 		}
