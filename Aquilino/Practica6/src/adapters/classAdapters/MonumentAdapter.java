@@ -26,8 +26,7 @@ public class MonumentAdapter extends Monumento implements Marcador {
 
 	@Override
 	public void abrir() {
-		// TODO Auto-generated method stub
-
+		gps.navegarHasta(getDirección());
 	}
 
 }
