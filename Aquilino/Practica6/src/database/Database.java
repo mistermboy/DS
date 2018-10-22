@@ -18,8 +18,8 @@ public class Database {
 
 	public Collection<Foto> selectFotos() {
 		List<Foto> fotos = new ArrayList<Foto>();
-		fotos.add(new Foto("El Coliseo de noche", "Raúl", new Coordenadas(20, 20)));
-		fotos.add(new Foto("Un perro mordiendo a un turista", "Raúl", new Coordenadas(40, 40)));
+		fotos.add(new Foto("Raúl", "El Coliseo de noche", new Coordenadas(20, 20)));
+		fotos.add(new Foto("Raúl", "Un perro mordiendo a un turista", new Coordenadas(40, 40)));
 		return fotos;
 	}
 
