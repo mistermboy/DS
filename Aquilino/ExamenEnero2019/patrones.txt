@@ -1,0 +1,16 @@
+Patrón utilizado: Strategy
+Participantes
+-------------
+1) Contexto--> Dash,Configurator
+   Métodos:
+   - InterfazContexto() --> pressButton(), toString()
+
+2) Estrategia--> Action
+   Métodos:
+   - InterfazAlgoritmo() --> press(), getInfo()
+
+3) EstrategiaConcreta--> OrderCoffe,OrderGillete,Diable,
+			TellTheTime,Forecast,EmergencyService
+   Métodos:
+   - InterfazAlgoritmo() --> press(), getInfo()
+
